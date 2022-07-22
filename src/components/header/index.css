@@ -1,0 +1,57 @@
+.App-logo {
+  height: 40px;
+  cursor: pointer;
+}
+.phone {
+  margin-top: 4px;
+}
+.contact-header {
+  display: flex;
+  margin: 5px;
+}
+.contact-header li {
+  padding-right: 10px;
+}
+.app-header {
+  background-color: #33a457;
+  color: white;
+}
+.header-info {
+  display: flex;
+  justify-content: center;
+  background-color: #add9e6;
+  /* padding: 10px; */
+}
+
+.header-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+.nav-links a {
+  transition: 0.4s ease-in-out;
+
+  background: linear-gradient(
+    0.25turn,
+    var(--color-secondary),
+    var(--color-secondary),
+    white 50%
+  );
+  background-size: 400%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a:hover {
+  background-position: 0%;
+}
