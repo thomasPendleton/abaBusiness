@@ -18,6 +18,14 @@ const Header = () => {
           />
         </Link>
 
+        <div className="burger-wrapper">
+          <div class="burger ten activated">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+
         <nav>
           <ul className="nav-links">
             <li>
@@ -50,23 +58,65 @@ const Wrapper = styled.header`
   color: #fff;
 
   .App-logo {
-    height: 70px;
+    height: 40px;
     cursor: pointer;
   }
-
-  .header-nav {
-    width: 100%;
+  .header-nav{
     display: flex;
     align-items: center;
+    
     justify-content: space-around;
+  }
+
+
+  .burger-wrapper {
+    
+  }
+  .burger-wrapper .item {
+    width: calc(33% - 30px);
+    padding: 15px;
+  }
+  .burger {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
     padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .burger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.25s;
+  }
+
+  .burger.ten {
+    justify-content: space-around;
+  }
+  .burger.ten.activated span:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+  }
+  .burger.ten.activated span:nth-child(2) {
+    transform: translateY(-1px) rotate(-45deg);
+  }
+  @keyframes burger {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .nav-links {
-    display: flex;
-    gap: 2rem;
-    font-size: 1.5rem;
-    font-weight: 700;
+    display: none;
   }
 
   .nav-links a {
@@ -86,6 +136,37 @@ const Wrapper = styled.header`
 
   .nav-links a:hover {
     background-position: 0%;
+  }
+
+  @media screen and (min-width: 504px) {
+    .header-nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    .burger-wrapper{
+      display: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+  }
+  @media screen and (min-width: 660px) {
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .App-logo {
+      height: 50px;
+      cursor: pointer;
+    }
   }
 `
 
