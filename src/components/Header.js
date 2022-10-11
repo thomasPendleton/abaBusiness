@@ -9,8 +9,9 @@ const Header = () => {
   const { isSidebarOpen, toggleSidebar } = useContext(sidebarContext)
 
   return (
-    <Wrapper className="app-header">
+    <Wrapper>
       <HeaderContact />
+
       <div className="nav-center">
         <div className="nav-container">
           <div className="header-nav">
@@ -58,9 +59,9 @@ const Header = () => {
 }
 
 const Wrapper = styled.header`
-/* position: sticky; */
   background-color: #33a457;
   color: #fff;
+
   .nav-center {
     margin-top: 4.7rem;
     height: 5rem;
@@ -111,16 +112,20 @@ const Wrapper = styled.header`
   .nav-links a:hover {
     background-position: 0%;
   }
+  @media screen and (min-width: 650px) {
+    .nav-center {
+      margin-top: 3rem;
+    }
+  }
 
+  
   @media screen and (min-width: 905px) {
     .nav-toggle {
       display: none;
     }
     .nav-center {
-    margin-top: 3rem;
-    
-  }
-
+      margin-top: 3rem;
+    }
     .nav-container {
       display: grid;
       grid-template-columns: auto 1fr auto;
@@ -143,7 +148,6 @@ const Wrapper = styled.header`
       a {
         text-transform: capitalize;
         padding: 0.5rem;
-
       }
     }
     .App-logo {

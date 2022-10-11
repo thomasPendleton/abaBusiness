@@ -33,14 +33,13 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  ul{
+  ul {
     padding-inline-start: 0;
   }
   .contact-header {
     display: flex;
     flex-direction: column;
     margin: 5px;
-    
   }
   ul .phone {
     display: none;
@@ -55,21 +54,36 @@ const Wrapper = styled.div`
     filter: drop-shadow(1px 1px 1px rgb(0, 0, 0, 0.5));
   }
 
-  @media screen and (min-width: 905px) {
+  @media screen and (min-width: 650px) {
     display: flex;
     justify-content: center;
-    height: 3rem; 
-    font-size: 1.4rem;
+    align-items: center;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+
     .contact-header {
       margin: 5px;
       flex-direction: row;
     }
   }
-  .phone {
-    display: block;
-  }
-  ul .phone {
-    margin-top: 4px;
+ 
+
+  @media screen and (min-width: 905px) {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    .contact-header {
+      margin: 5px;
+      flex-direction: row;
+    }
+    ul .phone {
+      display: block;
+      margin-top: 4px;
+    }
   }
 `
 
