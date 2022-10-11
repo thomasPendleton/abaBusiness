@@ -1,10 +1,13 @@
-import React from "react"
+import React, {useContext} from "react"
+import { sidebarContext } from "../context/SidebarContext"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import HeaderContact from "./HeaderContact"
 import { AiOutlineBars } from "react-icons/ai"
 
 const Header = () => {
+  const { isSidebarOpen, toggleSidebar } = useContext(sidebarContext)
+
   return (
     <Wrapper className="app-header">
       <HeaderContact />
@@ -22,7 +25,7 @@ const Header = () => {
             <button
               type="button"
               className="nav-toggle"
-              // onClick={() => openSidebar()}
+              onClick={() => toggleSidebar()}
             >
               <AiOutlineBars />
             </button>
@@ -55,9 +58,11 @@ const Header = () => {
 }
 
 const Wrapper = styled.header`
+/* position: sticky; */
   background-color: #33a457;
   color: #fff;
   .nav-center {
+    margin-top: 4.7rem;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -111,6 +116,10 @@ const Wrapper = styled.header`
     .nav-toggle {
       display: none;
     }
+    .nav-center {
+    margin-top: 3rem;
+    
+  }
 
     .nav-container {
       display: grid;
@@ -127,13 +136,14 @@ const Wrapper = styled.header`
     }
     .nav-links {
       display: flex;
-      /* justify-content: center; */
+      justify-content: flex-end;
       li {
         margin: 0 0.5rem;
       }
       a {
         text-transform: capitalize;
         padding: 0.5rem;
+
       }
     }
     .App-logo {

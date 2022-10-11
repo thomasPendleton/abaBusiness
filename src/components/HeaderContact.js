@@ -21,11 +21,18 @@ const HeaderContact = () => {
 }
 
 const Wrapper = styled.div`
-  background-color: #aaf2d4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.7rem;
+  z-index: 100;
+  background-color: #aaf2d499;
+  color: #fff;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   text-align: center;
-  height: 4.7rem;
   ul{
     padding-inline-start: 0;
   }
@@ -52,8 +59,6 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     height: 3rem; 
-    background-color: #aaf2d4;
-    color: #fff;
     font-size: 1.4rem;
     .contact-header {
       margin: 5px;
