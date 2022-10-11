@@ -21,7 +21,23 @@ const HeaderContact = () => {
 }
 
 const Wrapper = styled.div`
-  display: none;
+  background-color: #aaf2d4;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 4.7rem;
+  ul{
+    padding-inline-start: 0;
+  }
+  .contact-header {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    
+  }
+  ul .phone {
+    display: none;
+  }
 
   .contact-header {
     display: flex;
@@ -32,16 +48,23 @@ const Wrapper = styled.div`
     filter: drop-shadow(1px 1px 1px rgb(0, 0, 0, 0.5));
   }
 
-  .phone {
-    margin-top: 4px;
-  }
   @media screen and (min-width: 905px) {
-    display: block;
     display: flex;
     justify-content: center;
+    height: 3rem; 
     background-color: #aaf2d4;
     color: #fff;
     font-size: 1.4rem;
+    .contact-header {
+      margin: 5px;
+      flex-direction: row;
+    }
+  }
+  .phone {
+    display: block;
+  }
+  ul .phone {
+    margin-top: 4px;
   }
 `
 
