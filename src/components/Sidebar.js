@@ -1,7 +1,6 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import { sidebarContext } from "../context/SidebarContext"
 import { Link } from "react-router-dom"
-import HeaderContact from "./HeaderContact"
 import styled from "styled-components"
 import Logo from "../assets/logo.png"
 import { FaTimes } from "react-icons/fa"
@@ -11,12 +10,9 @@ const Sidebar = () => {
 
   console.log(isSidebarOpen, "context")
 
- 
-
   return (
     <Wrapper>
       <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
-      {/* <HeaderContact /> */}
 
         <div className="sidebar-header">
           <img className="logo" src={Logo} alt="logo" />
@@ -30,7 +26,19 @@ const Sidebar = () => {
             <Link to="/">Home</Link>
           </li>
           <li onClick={() => toggleSidebar()}>
+            <Link to="/services">Services</Link>
+          </li>
+          <li onClick={() => toggleSidebar()}>
+            <Link to="/about">About</Link>
+          </li>
+          <li onClick={() => toggleSidebar()}>
             <Link to="/blog">Blog</Link>
+          </li>
+          <li onClick={() => toggleSidebar()}>
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li onClick={() => toggleSidebar()}>
+            <a href="tel:714-696-2862">Call Now</a>
           </li>
         </ul>
       </aside>
@@ -78,6 +86,13 @@ const Wrapper = styled.div`
       align-items: center;
       color: red;
     }
+  }
+
+  @media screen and (min-width: 650px) {
+    .sidebar {
+    top: 3rem;
+  }
+
   }
   @media screen and (min-width: 905px) {
     .sidebar {
