@@ -21,13 +21,8 @@ const HeaderContact = () => {
 }
 
 const Wrapper = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4.7rem;
-  z-index: 100;
-  background-color: #aaf2d499;
+ 
+  background-color: #aaf2d4;
   color: #fff;
   font-weight: 600;
   display: flex;

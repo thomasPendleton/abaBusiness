@@ -13,6 +13,7 @@ const Sidebar = () => {
       <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
         <div className="sidebar-header">
           <img className="logo" src={Logo} alt="logo" />
+          <h2 className="acuity">Acuity Behavior Solutions</h2>
           <button className="close-btn" onClick={() => toggleSidebar()}>
             <FaTimes />
           </button>
@@ -69,23 +70,37 @@ const Sidebar = () => {
 
 const Wrapper = styled.div`
   text-align: center;
+
+  li {
+    border-bottom: 1px solid white;
+    &:hover {
+      border-color: #33a457;
+    }
+    .link {
+      transition: all 0.3s ease;
+      &:hover {
+        color: #33a457;
+      }
+    }
+  }
+
   .link-list {
     margin: 10px auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: start;
-    .link {
-      color: #fff;
-      font-size: 3rem;
-      text-decoration: none;
-      filter: drop-shadow(1px 1px 1px rgba(10, 10, 10, 0.5));
-    }
+  }
+  .link {
+    color: #fff;
+    font-size: 3rem;
+    text-decoration: none;
+    filter: drop-shadow(1px 1px 1px rgba(10, 10, 10, 0.5));
   }
 
   .sidebar {
     position: fixed;
-    top: 4.5rem;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -100,13 +115,17 @@ const Wrapper = styled.div`
   }
   .sidebar-header {
     display: flex;
-    border-top: 1px solid grey;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    .acuity {
+      color: #33a457;
+      filter: drop-shadow(1px 1px 2px #fff);
+      font-size: 1.5rem;
+    }
   }
   .logo {
-    max-height: 60px;
+    max-height: 80px;
     justify-self: center;
   }
   .close-btn {
@@ -124,7 +143,7 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: 650px) {
     .sidebar {
-      top: 3rem;
+      /* top: 3rem; */
     }
   }
   @media screen and (min-width: 905px) {

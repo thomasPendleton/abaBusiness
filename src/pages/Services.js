@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import FollowUs from '../components/FollowUs'
 
 const Services = () => {
   return (
@@ -17,7 +18,7 @@ const Services = () => {
           <h3>Assessment</h3>
           <img
             src="https://www.acuitybehaviorsolutions.com/wp-content/uploads/2016/02/icon1-1.png"
-            alt=""
+            alt="icon"
           />
           <p>
             Assessment guides our intervention. Our comprehensive assessments
@@ -30,10 +31,10 @@ const Services = () => {
           <button className="btn">See More</button>
         </div>
         <div className="service two">
-          <h3>Assessment</h3>
+          <h3>Direct ABA Intervention</h3>
           <img
             src="https://www.acuitybehaviorsolutions.com/wp-content/uploads/2016/02/icon2.png"
-            alt=""
+            alt="icon"
           />
           <p>
             Direct service includes home and community based behavioral
@@ -48,10 +49,10 @@ const Services = () => {
           <button className="btn">See More</button>
         </div>
         <div className="service three">
-          <h3>Assessment</h3>
+          <h3>Supervision</h3>
           <img
             src="https://www.acuitybehaviorsolutions.com/wp-content/uploads/2016/02/home_toy_iconbox1.png"
-            alt=""
+            alt="icon"
           />
           <p>
             Supervision is provided by a BCBA, a Board Certified Behavior
@@ -64,10 +65,10 @@ const Services = () => {
           <button className="btn">See More</button>
         </div>
         <div className="service four">
-          <h3>Assessment</h3>
+          <h3>Parent Consultation</h3>
           <img
             src="https://www.acuitybehaviorsolutions.com/wp-content/uploads/2016/02/fam-1.png"
-            alt=""
+            alt="icon"
           />
           <p>
             Parent consultation provides parents with the tools and skills to
@@ -77,40 +78,56 @@ const Services = () => {
           </p>
           <button className="btn">See More</button>
         </div>
+
       </div>
+      <FollowUs></FollowUs>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
   text-align: center;
-  color: #852ebd;
+
   .services-header {
     margin: 0 auto;
     text-align: center;
+    color: #813cc8fa;
     width: clamp(300px, 50%, 600px);
     font-family: Raleway, Arial, Helvetica, sans-serif;
     h1 {
-      /* color: purple; */
       font-weight: 500;
     }
   }
-
+ 
   .one {
-    background-color: yellow;
+    color: #fff;
+    background-color: rgb(133, 61, 181);
   }
   .two {
-    background-color: purple;
+    color: #222;
+    background-color: rgb(255, 230, 23);
+    .btn {
+      color: #000;
+      &:hover {
+        color: #222;
+      }
+    }
   }
   .three {
-    background-color: green;
+    color: #fff;
+    background-color: rgb(38, 174, 11);
   }
   .four {
-    background-color: lightblue;
+    color: #fff;
+    background-color: rgb(18, 162, 229);
   }
   .service-type-container {
+    margin: 0 auto;
+    width: clamp(100px, 100%, 1000px);
+
     .service {
-      border: 2px solid red;
+      background-image: url("https://themes.muffingroup.com/be/toy/wp-content/uploads/2016/02/home_toy_wrap_bg.png");
+      background-position: center;
       padding: 20px 10px;
     }
 
@@ -118,10 +135,46 @@ const Wrapper = styled.section`
       max-width: 50%;
     }
   }
-  @media screen and (min-width: 500px) {
+  .btn {
+    background-color: transparent;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 99px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color: #d9dddc;
+    }
+    &:active {
+      color: gray;
+    }
+  }
+  @media screen and (min-width: 550px) {
+    margin-bottom: 50px;
     .service-type-container {
+
       display: grid;
       grid-template-columns: 1fr 1fr;
+
+      .service {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .btn{
+          margin: 10px;
+        }
+        p{
+          height: max(30%, 50%);
+        }
+        img{
+          height: 150px;
+          max-width: 90%;
+        }
+      }
     }
   }
 `

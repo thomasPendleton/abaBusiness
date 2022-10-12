@@ -1,6 +1,6 @@
 import React, {useContext} from "react"
 import { sidebarContext } from "../context/SidebarContext"
-import { Link } from "react-router-dom"
+import { NavLink as navlink, Link } from "react-router-dom"
 import styled from "styled-components"
 import HeaderContact from "./HeaderContact"
 import { AiOutlineBars } from "react-icons/ai"
@@ -18,7 +18,7 @@ const Header = () => {
             <Link to="/">
               <img
                 src="https://www.acuitybehaviorsolutions.com/wp-content/uploads/2017/01/logo.png"
-                className="App-logo"
+                className="app-logo"
                 alt="logo"
               />
             </Link>
@@ -34,22 +34,22 @@ const Header = () => {
 
           <ul className="nav-links">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/services">Our Services</Link>
+              <NavLink to="/services">Our Services</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <Link to="blog">Blog</Link>
+              <NavLink to="blog">Blog</NavLink>
             </li>
             <li>
-              <Link to="contact">Contact Us</Link>
+              <NavLink to="contact">Contact Us</NavLink>
             </li>
             {/* <li>
-              <Link to="call">Call Now</Link>
+              <NavLink to="call">Call Now</NavLink>
             </li> */}
           </ul>
         </div>
@@ -58,12 +58,52 @@ const Header = () => {
   )
 }
 
+const NavLink = styled(navlink)`
+  position: relative;
+  transition: 0.4s ease-in-out;
+  background: linear-gradient(
+    0.25turn,
+    var(--color-secondary),
+    var(--color-secondary),
+    white 50%
+  );
+  background-size: 400%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: var(--color-secondary);
+    transition: width 500ms ease;
+  }
+  &.active::after {
+    width: 100%;
+  }
+
+  &:hover {
+    background-position: 0%;
+  }
+
+  &:active {
+    /* border-color: var(--color-secondary); */
+  }
+  &.active {
+    background-position: 0%;
+    /* border-bottom: 1px solid var(--color-secondary); */
+  }
+`
+
 const Wrapper = styled.header`
   background-color: #33a457;
   color: #fff;
 
   .nav-center {
-    margin-top: 4.7rem;
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -73,8 +113,8 @@ const Wrapper = styled.header`
     width: 90vw;
     margin: 0 auto;
   }
-  .App-logo {
-    height: 50px;
+  .app-logo {
+    height: 70px;
     cursor: pointer;
   }
 
@@ -88,7 +128,7 @@ const Wrapper = styled.header`
     border: transparent;
     color: #fff;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .nav-links {
@@ -96,7 +136,7 @@ const Wrapper = styled.header`
   }
 
   /* blue background transition on hover */
-  .nav-links a {
+  /* .nav-links a {
     transition: 0.4s ease-in-out;
     background: linear-gradient(
       0.25turn,
@@ -108,24 +148,19 @@ const Wrapper = styled.header`
     background-position: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .nav-links a:hover {
+  } */
+  /* .nav-links a:hover {
     background-position: 0%;
-  }
+  } */
+
   @media screen and (min-width: 650px) {
-    .nav-center {
-      margin-top: 3rem;
-    }
   }
 
-  
   @media screen and (min-width: 905px) {
     .nav-toggle {
       display: none;
     }
-    .nav-center {
-      margin-top: 3rem;
-    }
+
     .nav-container {
       display: grid;
       grid-template-columns: auto 1fr auto;
@@ -134,20 +169,16 @@ const Wrapper = styled.header`
 
     .nav-links {
       display: flex;
-      /* gap: 1.8rem; */
-      font-size: 1.2rem;
-      font-weight: 700;
       font-family: Montserrat;
-    }
-    .nav-links {
-      display: flex;
+      font-weight: 700;
+      font-size: 1.2rem;
       justify-content: flex-end;
       li {
-        margin: 0 0.5rem;
+        margin: 0 .9rem;
       }
       a {
         text-transform: capitalize;
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
       }
     }
     .App-logo {
