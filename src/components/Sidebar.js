@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { sidebarContext } from "../context/SidebarContext"
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import styled from "styled-components"
 import Logo from "../assets/logo.png"
 import { FaTimes } from "react-icons/fa"
@@ -21,37 +21,45 @@ const Sidebar = () => {
 
         <ul className="link-list">
           <li>
-            <Link onClick={() => toggleSidebar()} className="link" to="/">
+            <NavLink onClick={() => toggleSidebar()} className="link" to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               onClick={() => toggleSidebar()}
               className="link"
               to="/services"
             >
               Services
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link onClick={() => toggleSidebar()} className="link" to="/about">
+            <NavLink
+              onClick={() => toggleSidebar()}
+              className="link"
+              to="/about"
+            >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link onClick={() => toggleSidebar()} className="link" to="/blog">
+            <NavLink
+              onClick={() => toggleSidebar()}
+              className="link"
+              to="/blog"
+            >
               Blog
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               onClick={() => toggleSidebar()}
               className="link"
               to="/contact"
             >
               Contact Us
-            </Link>
+            </NavLink>
           </li>
           <li>
             <a
@@ -71,15 +79,41 @@ const Sidebar = () => {
 const Wrapper = styled.div`
   text-align: center;
 
+  a {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background-color: #33a457;
+      transition: width 500ms ease;
+    }
+    &:hover::after {
+      width: 100%;
+      background-position: 0%;
+    }
+    &.active::after {
+      width: 100%;
+    }
+  }
+
   li {
     border-bottom: 1px solid white;
-    &:hover {
+    .active {
+      color: var(--color-primary);
       border-color: #33a457;
+    }
+    &:hover {
+      /* border-color: #33a457; */
     }
     .link {
       transition: all 0.3s ease;
       &:hover {
         color: #33a457;
+        border-color: #33a457;
       }
     }
   }

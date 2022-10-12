@@ -63,7 +63,6 @@ const Wrapper = styled.div`
     }
   }
  
-
   @media screen and (min-width: 905px) {
     display: flex;
     justify-content: center;

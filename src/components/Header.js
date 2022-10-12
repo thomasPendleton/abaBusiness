@@ -85,17 +85,12 @@ const NavLink = styled(navlink)`
   &.active::after {
     width: 100%;
   }
-
   &:hover {
     background-position: 0%;
   }
 
-  &:active {
-    /* border-color: var(--color-secondary); */
-  }
   &.active {
     background-position: 0%;
-    /* border-bottom: 1px solid var(--color-secondary); */
   }
 `
 
@@ -134,24 +129,6 @@ const Wrapper = styled.header`
   .nav-links {
     display: none;
   }
-
-  /* blue background transition on hover */
-  /* .nav-links a {
-    transition: 0.4s ease-in-out;
-    background: linear-gradient(
-      0.25turn,
-      var(--color-secondary),
-      var(--color-secondary),
-      white 50%
-    );
-    background-size: 400%;
-    background-position: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  } */
-  /* .nav-links a:hover {
-    background-position: 0%;
-  } */
 
   @media screen and (min-width: 650px) {
   }

@@ -21,7 +21,8 @@
 :root {
   --color-primary: #33a457;
   --color-primary-transparent: #33a45747;
-  --color-secondary: #add9e6;
+  --color-secondary: #aaf2d4;
+  --color-secondary-alt: #add9e6;
 }
 
 body {
