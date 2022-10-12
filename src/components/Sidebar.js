@@ -8,12 +8,9 @@ import { FaTimes } from "react-icons/fa"
 const Sidebar = () => {
   const { isSidebarOpen, toggleSidebar } = useContext(sidebarContext)
 
-  console.log(isSidebarOpen, "context")
-
   return (
     <Wrapper>
       <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
-
         <div className="sidebar-header">
           <img className="logo" src={Logo} alt="logo" />
           <button className="close-btn" onClick={() => toggleSidebar()}>
@@ -21,24 +18,48 @@ const Sidebar = () => {
           </button>
         </div>
 
-        <ul>
-          <li onClick={() => toggleSidebar()}>
-            <Link to="/">Home</Link>
+        <ul className="link-list">
+          <li>
+            <Link onClick={() => toggleSidebar()} className="link" to="/">
+              Home
+            </Link>
           </li>
-          <li onClick={() => toggleSidebar()}>
-            <Link to="/services">Services</Link>
+          <li>
+            <Link
+              onClick={() => toggleSidebar()}
+              className="link"
+              to="/services"
+            >
+              Services
+            </Link>
           </li>
-          <li onClick={() => toggleSidebar()}>
-            <Link to="/about">About</Link>
+          <li>
+            <Link onClick={() => toggleSidebar()} className="link" to="/about">
+              About
+            </Link>
           </li>
-          <li onClick={() => toggleSidebar()}>
-            <Link to="/blog">Blog</Link>
+          <li>
+            <Link onClick={() => toggleSidebar()} className="link" to="/blog">
+              Blog
+            </Link>
           </li>
-          <li onClick={() => toggleSidebar()}>
-            <Link to="/contact">Contact Us</Link>
+          <li>
+            <Link
+              onClick={() => toggleSidebar()}
+              className="link"
+              to="/contact"
+            >
+              Contact Us
+            </Link>
           </li>
-          <li onClick={() => toggleSidebar()}>
-            <a href="tel:714-696-2862">Call Now</a>
+          <li>
+            <a
+              onClick={() => toggleSidebar()}
+              className="link"
+              href="tel:714-696-2862"
+            >
+              Call Now
+            </a>
           </li>
         </ul>
       </aside>
@@ -48,7 +69,20 @@ const Sidebar = () => {
 
 const Wrapper = styled.div`
   text-align: center;
-  
+  .link-list {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+    .link {
+      color: #fff;
+      font-size: 3rem;
+      text-decoration: none;
+      filter: drop-shadow(1px 1px 1px rgba(10, 10, 10, 0.5));
+    }
+  }
+
   .sidebar {
     position: fixed;
     top: 4.5rem;
@@ -90,9 +124,8 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: 650px) {
     .sidebar {
-    top: 3rem;
-  }
-
+      top: 3rem;
+    }
   }
   @media screen and (min-width: 905px) {
     .sidebar {

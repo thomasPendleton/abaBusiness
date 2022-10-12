@@ -4,14 +4,16 @@ import styled from 'styled-components'
 const Blog = () => {
   return (
     <Wrapper>
-      blog
+      <h1>Blog</h1>
     </Wrapper>
   )
 }
 
-
 const Wrapper = styled.div`
-/* height: 100vh; */
+  margin: 0 auto;
+  text-align: center;
+  width: clamp(200px, 50%, 600px);
 `
+
 
 export default Blog

@@ -48,9 +48,9 @@ const Header = () => {
             <li>
               <Link to="contact">Contact Us</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="call">Call Now</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
