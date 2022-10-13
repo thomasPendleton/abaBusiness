@@ -10,11 +10,13 @@ const Blog = () => {
 }
 
 const Wrapper = styled.div`
-  margin: 125px auto;
+  margin: 170px auto;
   text-align: center;
-  width: clamp(200px, 50%, 600px);
+  @media screen and (min-width: 905px) {
+    margin: 155px auto;
+
+  }
   //Remove height
-  height: calc(100vh - 21rem);
 
 `
 

@@ -141,7 +141,6 @@ const Wrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  /* height: 125px; */
   width: 100%;
   z-index: 60;
   transition: top 400ms ease-in-out;
@@ -159,6 +158,7 @@ const Wrapper = styled.header`
     margin: 0 auto;
   }
   .app-logo {
+     margin-top: 3px;
     height: 70px;
     cursor: pointer;
   }

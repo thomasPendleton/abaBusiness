@@ -16,6 +16,10 @@ const Home = () => {
   )
 }
 const Wrapper = styled.section`
-  margin: 125px auto;
+  margin: 153px auto;
+  text-align: center;
+  @media screen and (min-width: 905px) {
+    margin: 125px auto;
+  }
 `
 export default Home

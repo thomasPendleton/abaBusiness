@@ -86,8 +86,8 @@ const Services = () => {
 }
 
 const Wrapper = styled.section`
+  margin: 170px auto;
   text-align: center;
-  margin: 125px auto;
 
   .services-header {
     margin: 0 auto;
@@ -99,7 +99,7 @@ const Wrapper = styled.section`
       font-weight: 500;
     }
   }
- 
+
   .one {
     color: #fff;
     background-color: rgb(133, 61, 181);
@@ -156,7 +156,6 @@ const Wrapper = styled.section`
   @media screen and (min-width: 550px) {
     margin-bottom: 50px;
     .service-type-container {
-
       display: grid;
       grid-template-columns: 1fr 1fr;
 
@@ -165,18 +164,21 @@ const Wrapper = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .btn{
+        .btn {
           margin: 10px;
         }
-        p{
+        p {
           height: max(30%, 50%);
         }
-        img{
+        img {
           height: 150px;
           max-width: 90%;
         }
       }
     }
+  }
+  @media screen and (min-width: 905px) {
+    margin: 155px auto;
   }
 `
 export default Services

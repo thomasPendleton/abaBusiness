@@ -12,7 +12,11 @@ const About = () => {
 }
 
 const Wrapper = styled.section`
-  margin: 125px auto;
+  margin: 170px auto;
   text-align: center;
+  @media screen and (min-width: 905px) {
+    margin: 155px auto;
+
+  }
 `
 export default About
