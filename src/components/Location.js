@@ -23,6 +23,10 @@ const Location = () => {
             <a href="tel:7146962862">(714) 696-2862</a>
           </p>
           <p>
+            <strong>Fax: </strong>
+            <a href="fax:714-242-9308">(714) 242-9308</a>
+          </p>
+          <p>
             <strong>Email: </strong>
             <a href="mailto:info@acuitybehaviorsolutions.com">
               info@acuitybehaviorsolutions.com
@@ -39,7 +43,7 @@ const Location = () => {
             title="acuity map"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d53044.661227019446!2d-117.8824657!3d33.8047943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3648f8dc69863d8!2sAcuity%20Behavior%20Solutions%20-%20ABA%20Therapy%20Orange%20County!5e0!3m2!1sen!2sus!4v1665680216940!5m2!1sen!2sus"
             width="100%"
-            height="450"
+            height="100%"
             style={{ border: "0" }}
             allowfullscreen=""
             loading="lazy"
@@ -55,7 +59,12 @@ const Wrapper = styled.section`
   text-align: center;
   margin: 50px auto;
   width: 95%;
-
+  .info-container{
+    .map{
+        height: 450px;
+    }
+  }
+  
   .business-info {
     a {
       color: var(--purple);
@@ -71,6 +80,10 @@ const Wrapper = styled.section`
     .summary {
       font-size: 1.3rem;
       color: var(--black);
+    
+    margin: auto;
+    max-width: 600px;
+  
     }
     .info-container {
       margin: 30px auto;
@@ -80,17 +93,17 @@ const Wrapper = styled.section`
       gap: 10px;
       .business-info {
         color: var(--black);
-
         font-size: 1.5rem;
-        margin: auto;
+        margin: 0 auto;
         background-color: var(--color-secondary-alt);
         border-radius: 10px;
-        padding: 20px;
+        padding: 10px;
         border: 3px solid var(--purple);
         box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
       }
       .map {
-        min-height: 450px;
+        margin: auto 0;
+        min-height: 460px;
         max-width: 800px;
         box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
       }
