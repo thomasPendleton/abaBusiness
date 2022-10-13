@@ -123,7 +123,7 @@ const Wrapper = styled.header`
     border: transparent;
     color: #fff;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .nav-links {
@@ -147,8 +147,8 @@ const Wrapper = styled.header`
     .nav-links {
       display: flex;
       font-family: Montserrat;
-      font-weight: 700;
-      font-size: 1.2rem;
+      font-weight: 800;
+      font-size: 1.6rem;
       justify-content: flex-end;
       li {
         margin: 0 .9rem;
