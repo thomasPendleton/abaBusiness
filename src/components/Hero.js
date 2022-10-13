@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-// import "./index.css"
+import { Link } from "react-router-dom"
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -45,7 +45,7 @@ const Hero = () => {
                 Call for a free phone consultation today!
               </h3>
               <div className="button">
-                <button className="contact-us">Contact Us</button>
+                <Link to='/contact' className="contact-us">Contact Us</Link>
               </div>
             </div>
           </article>
@@ -71,7 +71,7 @@ const Hero = () => {
                 children with Autism Spectrum Disorder.{" "}
               </h3>
               <div className="button">
-                <button className="contact-us">Learn More</button>
+                <Link to='/services' className="contact-us">Learn More</Link>
               </div>
             </div>
           </article>
@@ -97,7 +97,7 @@ const Hero = () => {
                 Our FAQ is a great place to start!
               </h3>
               <div className="button">
-                <button className="contact-us">Learn More</button>
+                <Link to='/services' className="contact-us">Learn More</Link>
               </div>
             </div>
           </article>
@@ -128,6 +128,7 @@ const Wrapper = styled.section`
     top: 10%;
     left: 50%;
     width: 90%;
+    height: 80%;
     transform: translatex(-50%);
     display: flex;
     flex-direction: column;
@@ -157,6 +158,11 @@ const Wrapper = styled.section`
     }
   }
 
+  .button{
+    display: flex;
+    justify-content: center;
+
+  }
   .contact-us {
     background-color: rgb(55, 189, 60, 0.84);
     font-weight: 700;

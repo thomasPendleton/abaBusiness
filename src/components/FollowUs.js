@@ -18,7 +18,7 @@ text-align: center;
 font-family: Raleway, Arial,sans-serif;
 font-size: 1.4rem;
 margin: 30px auto;
-color: #333333;
+color: var(--black);
 h3{
     margin: 20px auto;
 }

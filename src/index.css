@@ -23,6 +23,8 @@
   --color-primary-transparent: #33a45747;
   --color-secondary: #aaf2d4;
   --color-secondary-alt: #add9e6;
+  --purple: #813cc8fa;
+  --black: #333;
 }
 
 body {
@@ -48,5 +50,6 @@ li {
 }
 
 a{
+  text-decoration: none;
   color: white;
 }

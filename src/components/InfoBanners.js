@@ -111,7 +111,7 @@ const Wrapper = styled.section`
     }
   }
   @media screen and (min-width: 550px) {
-    margin: 10px auto 100px;
+    margin: 10px auto 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     .infoBanner {

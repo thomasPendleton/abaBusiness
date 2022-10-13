@@ -80,7 +80,7 @@ const Services = () => {
         </div>
 
       </div>
-      <FollowUs></FollowUs>
+      <FollowUs />
     </Wrapper>
   )
 }
