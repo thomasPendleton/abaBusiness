@@ -12,7 +12,7 @@ const About = () => {
 }
 
 const Wrapper = styled.section`
-  margin: 0 auto;
+  margin: 125px auto;
   text-align: center;
 `
 export default About

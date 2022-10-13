@@ -1,15 +1,58 @@
-import React, {useContext} from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { sidebarContext } from "../context/SidebarContext"
 import { NavLink as navlink, Link } from "react-router-dom"
 import styled from "styled-components"
+import { debounce } from "../utilities/debouce"
 import HeaderContact from "./HeaderContact"
 import { AiOutlineBars } from "react-icons/ai"
 
 const Header = () => {
   const { isSidebarOpen, toggleSidebar } = useContext(sidebarContext)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  const [visible, setVisible] = useState(true)
+
+  const handleScroll = () => {
+    console.log("scroll")
+
+    // const currentScrollPos = window.pageYOffset
+
+    // setVisible(
+    //   (prevScrollPos > currentScrollPos &&
+    //     prevScrollPos - currentScrollPos > 70) ||
+    //     currentScrollPos < 10
+    // )
+    // setPrevScrollPos(currentScrollPos)
+
+    const currentScrollPos = window.pageYOffset
+
+    if (prevScrollPos - currentScrollPos > 1) {
+      // console.log("difference ", prevScrollPos - currentScrollPos)
+      // console.log("on up")
+      setVisible(true)
+    } else if (currentScrollPos < 150) {
+      // console.log("currentscrollpos", currentScrollPos)
+      setVisible(true)
+    } else if (
+      prevScrollPos > currentScrollPos &&
+      prevScrollPos - currentScrollPos > 70
+    ) {
+      setVisible(true)
+    } else {
+      setVisible(false)
+    }
+    setPrevScrollPos(currentScrollPos)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [prevScrollPos, visible, handleScroll])
 
   return (
-    <Wrapper>
+    <Wrapper style={{ top: visible ? "0" : "-150px" }}>
       <HeaderContact />
 
       <div className="nav-center">
@@ -95,9 +138,16 @@ const NavLink = styled(navlink)`
 `
 
 const Wrapper = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* height: 125px; */
+  width: 100%;
+  z-index: 60;
+  transition: top 400ms ease-in-out;
+
   background-color: #33a457;
   color: #fff;
-
   .nav-center {
     height: 5rem;
     display: flex;
@@ -151,7 +201,7 @@ const Wrapper = styled.header`
       font-size: 1.6rem;
       justify-content: flex-end;
       li {
-        margin: 0 .9rem;
+        margin: 0 0.9rem;
       }
       a {
         text-transform: capitalize;

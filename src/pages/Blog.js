@@ -10,11 +10,11 @@ const Blog = () => {
 }
 
 const Wrapper = styled.div`
-  margin: 0 auto;
+  margin: 125px auto;
   text-align: center;
   width: clamp(200px, 50%, 600px);
   //Remove height
-  height: calc(100vh - 18rem);
+  height: calc(100vh - 21rem);
 
 `
 

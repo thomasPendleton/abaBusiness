@@ -87,6 +87,7 @@ const Services = () => {
 
 const Wrapper = styled.section`
   text-align: center;
+  margin: 125px auto;
 
   .services-header {
     margin: 0 auto;
