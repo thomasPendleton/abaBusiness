@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext, useEffect, useCallback } from "react"
 import { sidebarContext } from "../context/SidebarContext"
 import { NavLink as navlink, Link } from "react-router-dom"
 import styled from "styled-components"
@@ -11,8 +11,8 @@ const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
 
-  const handleScroll = () => {
-    console.log("scroll")
+  const handleScroll = useCallback(() => {
+    // console.log("scroll")
 
     // const currentScrollPos = window.pageYOffset
 
@@ -24,8 +24,8 @@ const Header = () => {
     // setPrevScrollPos(currentScrollPos)
 
     const currentScrollPos = window.pageYOffset
-
-    if (prevScrollPos - currentScrollPos > 1) {
+    console.log(prevScrollPos - currentScrollPos)
+    if (prevScrollPos - currentScrollPos > 0) {
       // console.log("difference ", prevScrollPos - currentScrollPos)
       // console.log("on up")
       setVisible(true)
@@ -41,7 +41,7 @@ const Header = () => {
       setVisible(false)
     }
     setPrevScrollPos(currentScrollPos)
-  }
+  }, [prevScrollPos])
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)

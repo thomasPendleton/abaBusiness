@@ -6,7 +6,6 @@ import FollowUs from "../components/FollowUs"
 import Location from "../components/Location"
 
 const Home = () => {
-  console.log('render');
   return (
     <Wrapper>
       <Hero />
