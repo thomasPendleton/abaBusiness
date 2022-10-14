@@ -95,7 +95,7 @@ const Wrapper = styled.section`
         color: var(--black);
         font-size: 1.5rem;
         margin: 0 auto;
-        background-color: var(--color-secondary-alt);
+        background-color: var(--color-secondary-alt-transparent);
         border-radius: 10px;
         padding: 10px;
         border: 3px solid var(--purple);

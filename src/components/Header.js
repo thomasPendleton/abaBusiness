@@ -1,8 +1,11 @@
 import React, { useState, useContext, useEffect, useCallback } from "react"
 import { sidebarContext } from "../context/SidebarContext"
 import { NavLink as navlink, Link } from "react-router-dom"
+
+
 import styled from "styled-components"
-import { debounce } from "../utilities/debouce"
+import Subheader from "./Subheader"
+// import { throttleFunction } from "../utilities/debouce"
 import HeaderContact from "./HeaderContact"
 import { AiOutlineBars } from "react-icons/ai"
 
@@ -10,6 +13,7 @@ const Header = () => {
   const { isSidebarOpen, toggleSidebar } = useContext(sidebarContext)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
+  const [subHeader, setSubHeader] = useState(false)
 
   const handleScroll = useCallback(() => {
     // console.log("scroll")
@@ -24,7 +28,7 @@ const Header = () => {
     // setPrevScrollPos(currentScrollPos)
 
     const currentScrollPos = window.pageYOffset
-    console.log(prevScrollPos - currentScrollPos)
+    // console.log(prevScrollPos - currentScrollPos)
     if (prevScrollPos - currentScrollPos > 0) {
       // console.log("difference ", prevScrollPos - currentScrollPos)
       // console.log("on up")
@@ -80,7 +84,14 @@ const Header = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/services">Our Services</NavLink>
+              <NavLink
+                to="/services"
+                // onMouseEnter={() => {
+                //   setSubHeader(true)
+                // }}
+              >
+                Our Services
+              </NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
@@ -97,6 +108,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
+      {/* {subHeader && <Subheader />} */}
     </Wrapper>
   )
 }
@@ -152,13 +164,15 @@ const Wrapper = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border-bottom: 1px solid var(--black); */
+    box-shadow: 0 5px 10px 2px rgba(0, 0 , 0, .2)
   }
   .nav-container {
     width: 90vw;
     margin: 0 auto;
   }
   .app-logo {
-     margin-top: 3px;
+    margin-top: 3px;
     height: 70px;
     cursor: pointer;
   }
