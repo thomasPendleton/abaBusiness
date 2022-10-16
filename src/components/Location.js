@@ -59,12 +59,12 @@ const Wrapper = styled.section`
   text-align: center;
   margin: 50px auto;
   width: 95%;
-  .info-container{
-    .map{
-        height: 450px;
+  .info-container {
+    .map {
+      height: 450px;
     }
   }
-  
+
   .business-info {
     a {
       color: var(--purple);
@@ -80,10 +80,9 @@ const Wrapper = styled.section`
     .summary {
       font-size: 1.3rem;
       color: var(--black);
-    
-    margin: auto;
-    max-width: 600px;
-  
+
+      margin: auto;
+      max-width: 600px;
     }
     .info-container {
       margin: 30px auto;
