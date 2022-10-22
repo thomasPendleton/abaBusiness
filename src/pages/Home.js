@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import InfoBanners from "../components/InfoBanners"
 import FollowUs from "../components/FollowUs"
 import Location from "../components/Location"
+import ServicesInclude from '../components/ServicesInclude'
 
 const Home = () => {
   return (
@@ -11,7 +12,9 @@ const Home = () => {
       <Hero />
       <FollowUs />
       <InfoBanners />
+      <ServicesInclude />
       <Location />
+      
     </Wrapper>
   )
 }
