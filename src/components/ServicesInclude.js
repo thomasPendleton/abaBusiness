@@ -63,7 +63,7 @@ const ServicesInclude = () => {
 const Wrapper = styled.section`
   font-family: Raleway, Arial, Helvetica, sans-serif;
   margin: 0 auto;
-  width: clamp(500px, 90%, 1200px);
+  width: clamp(300px, 90%, 1200px);
   h3 {
     font-size: 2rem;
   }
