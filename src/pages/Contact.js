@@ -5,6 +5,8 @@ import ContactUs from '../components/ContactUs'
 import FollowUs from '../components/FollowUs'
 
 const Contact = () => {
+  document.title = 'Contact Us | Acuity Behavior Solutions'
+
   return (
     <Wrapper>
       <ContactUs /> 

@@ -3,6 +3,8 @@ import styled from "styled-components"
 import FollowUs from '../components/FollowUs'
 
 const Services = () => {
+  document.title = 'ABA Therapy Services | Acuity Behavior Solutions'
+
   return (
     <Wrapper>
       <div className="services-header">

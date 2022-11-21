@@ -3,6 +3,9 @@ import styled from "styled-components"
 import Location from '../components/Location'
 
 const About = () => {
+
+  document.title = 'About ABA Therapy In Orange County | Acuity Behavior Solutions'
+
   return (
     <Wrapper>
       <h1>About</h1>

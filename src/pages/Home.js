@@ -7,6 +7,8 @@ import Location from "../components/Location"
 import ServicesInclude from '../components/ServicesInclude'
 
 const Home = () => {
+  document.title = 'ABA Therapy In Orange County | Acuity Behavior Solutions'
+
   return (
     <Wrapper>
       <Hero />
