@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
+import AboutInfo from '../components/AboutInfo'
+import FollowUs from '../components/FollowUs'
 import Location from '../components/Location'
 
 const About = () => {
@@ -8,17 +10,21 @@ const About = () => {
 
   return (
     <Wrapper>
-      <h1>About</h1>
+
+      <AboutInfo />
+
+      {/* Add another component here */}
       <Location />
+      <FollowUs />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  margin: 170px auto;
+  margin: 170px auto 50px;
   text-align: center;
   @media screen and (min-width: 905px) {
-    margin: 155px auto;
+    margin: 155px auto 50px;
 
   }
 `
