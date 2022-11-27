@@ -31,7 +31,7 @@ const Wrapper = styled.section`
   font-size: 1.8rem;
   .container {
     margin: 0 auto;
-      width: 95%;
+    width: 95%;
   }
   h2 {
     color: var(--purple);
@@ -41,15 +41,17 @@ const Wrapper = styled.section`
     width: 100%;
     /* margin: 20px; */
   }
-
+  p {
+    overflow-wrap: break-word;
+  }
   @media screen and (min-width: 1205px) {
-      text-align: left;
-      display: grid;
-      grid-template-columns: 50% 50%;
-      font-size: 1.5rem;
-      place-items: center;
-      .container {
-        margin: 20px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 1.5rem;
+    place-items: center;
+    .container {
+      margin: 20px;
     }
   }
 `
