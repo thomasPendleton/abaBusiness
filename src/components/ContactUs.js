@@ -19,6 +19,7 @@ const ContactUs = () => {
 
 const Wrapper = styled.section`
   font-family: Raleway, Arial, Helvetica, sans-serif;
+  text-align: center;
   h2 {
     color: var(--purple);
     font-size: 1.7rem;
