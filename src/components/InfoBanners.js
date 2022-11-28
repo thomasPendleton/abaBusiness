@@ -46,7 +46,7 @@ const InfoBanners = () => {
           Making a Difference in the Lives of Our Clients With Our In-Depth
           History of ABA Experience.
         </p>
-        <button className="btn">
+        <button type="button" className="btn">
           <Link to="/">See More</Link>
         </button>
       </div>
@@ -92,6 +92,7 @@ const Wrapper = styled.section`
       background-color: transparent;
       font-weight: 700;
       margin-top: 40px;
+      margin-bottom: 5px;
       padding: 5px;
       border-radius: 99px;
       border: none;
@@ -116,6 +117,22 @@ const Wrapper = styled.section`
     grid-template-columns: 1fr 1fr 1fr;
     .infoBanner {
       p {
+        font-size: 1.1rem;
+        height: 110px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+   
+    .infoBanner {
+      .btn{
+        font-size: 1.1rem;
+      }
+      h3{
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.5rem;
         height: 110px;
       }
     }

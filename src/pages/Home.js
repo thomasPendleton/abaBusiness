@@ -5,6 +5,7 @@ import InfoBanners from "../components/InfoBanners"
 import FollowUs from "../components/FollowUs"
 import Location from "../components/Location"
 import ServicesInclude from '../components/ServicesInclude'
+import WhereToBegin from '../components/WhereToBegin'
 
 const Home = () => {
   document.title = 'ABA Therapy In Orange County | Acuity Behavior Solutions'
@@ -14,6 +15,7 @@ const Home = () => {
       <Hero />
       <FollowUs />
       <InfoBanners />
+      <WhereToBegin />
       <ServicesInclude />
       <Location />
       
