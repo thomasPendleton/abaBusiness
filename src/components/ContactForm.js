@@ -31,7 +31,10 @@ const ContactForm = () => {
 
 const Wrapper = styled.section`
   margin: 20px auto;
+  
   .message-form {
+    /* width: 95%; */
+    /* margin: 0 auto; */
     text-align: left;
     display: grid;
     grid: auto / 1fr 1fr;

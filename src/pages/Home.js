@@ -6,6 +6,11 @@ import FollowUs from "../components/FollowUs"
 import Location from "../components/Location"
 import ServicesInclude from '../components/ServicesInclude'
 import WhereToBegin from '../components/WhereToBegin'
+import Helps from '../components/Helps'
+import BoardCertified from '../components/BoardCertified'
+import Mission from '../components/Mission'
+import ContactForm from '../components/ContactForm'
+import ContactUs from '../components/ContactUs'
 
 const Home = () => {
   document.title = 'ABA Therapy In Orange County | Acuity Behavior Solutions'
@@ -17,6 +22,10 @@ const Home = () => {
       <InfoBanners />
       <WhereToBegin />
       <ServicesInclude />
+      <BoardCertified />
+      <Helps />
+      <Mission />
+      <ContactUs />
       <Location />
       
     </Wrapper>

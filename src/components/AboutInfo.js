@@ -38,18 +38,28 @@ const Wrapper = styled.section`
     margin: 0;
   }
   img {
-    width: 100%;
+    width: 90%;
     /* margin: 20px; */
   }
   p {
     overflow-wrap: break-word;
   }
-  @media screen and (min-width: 1205px) {
+  @media screen and (min-width: 500px) {
+    img {
+    width: 60%;
+    /* margin: 20px; */
+  }
+  }
+  @media screen and (min-width: 1105px) {
     text-align: left;
     display: grid;
     grid-template-columns: 50% 50%;
     font-size: 1.5rem;
     place-items: center;
+    img {
+    width: 90%;
+    /* margin: 20px; */
+  }
     .container {
       margin: 20px;
     }

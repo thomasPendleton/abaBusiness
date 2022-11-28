@@ -3,6 +3,12 @@
 * {
   box-sizing: border-box;
 }
+::selection {
+  background: #b5b1f7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #b5b1f7; /* Gecko Browsers */
+}
 
 /* width */
 /* ::-webkit-scrollbar {
@@ -31,10 +37,11 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #d5e9d166;

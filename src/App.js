@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 import Footer from "./components/Footer"
+import ErrorPage from "./pages/ErrorPage"
 
 function App() {
   return (
@@ -19,10 +20,13 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
   )
 }
+
+
 
 export default App

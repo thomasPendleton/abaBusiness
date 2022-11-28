@@ -14,6 +14,8 @@ const Blog = () => {
 const Wrapper = styled.div`
   margin: 170px auto;
   text-align: center;
+
+  height: 60vh;
   @media screen and (min-width: 905px) {
     margin: 155px auto;
 
