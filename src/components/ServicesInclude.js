@@ -82,8 +82,8 @@ const Wrapper = styled.section`
   @media screen and (min-width: 1000px) {
     .service-container {
       font-size: 1.2rem;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 40px;
+      /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+      gap: 50px;
     }
   }
 `
