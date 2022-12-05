@@ -2,8 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import Location from '../components/Location'
 import ContactUs from '../components/ContactUs'
-import FollowUs from '../components/FollowUs'
-import ContactForm from '../components/ContactForm'
+import FollowUs from "../components/FollowUs"
 
 const Contact = () => {
   document.title = 'Contact Us | Acuity Behavior Solutions'

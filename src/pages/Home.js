@@ -9,7 +9,6 @@ import WhereToBegin from '../components/WhereToBegin'
 import Helps from '../components/Helps'
 import BoardCertified from '../components/BoardCertified'
 import Mission from '../components/Mission'
-import ContactForm from '../components/ContactForm'
 import ContactUs from '../components/ContactUs'
 
 const Home = () => {
