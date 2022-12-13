@@ -4,6 +4,7 @@ import AboutInfo from '../components/AboutInfo'
 import FollowUs from '../components/FollowUs'
 import Location from '../components/Location'
 import Methodologies from '../components/Methodologies'
+import Contracted from '../components/Contracted'
 
 const About = () => {
 
@@ -14,6 +15,7 @@ const About = () => {
 
       <AboutInfo />
       <Methodologies />
+      <Contracted />
       {/* Add another component here */}
       <Location />
       <FollowUs />

@@ -17,7 +17,7 @@ const Blog = () => {
           return (
             <BlogWrapper key={id}>
               <div className="image-wrapper">
-                <img src={image} alt="" />
+                <img src={image} alt={headline} />
               </div>
               <div className="content">
                 <div className="">
@@ -86,7 +86,9 @@ const BlogWrapper = styled.section`
   img {
     width: 100%;
     border-radius: 10px 10px 0 0;
+    min-height: 230px;
   }
+  
 
   .content {
     display: flex;
@@ -95,7 +97,6 @@ const BlogWrapper = styled.section`
     width: 95%;
     height: 185px;
     margin: 10px auto;
-
     p {
       margin: 0;
     }
