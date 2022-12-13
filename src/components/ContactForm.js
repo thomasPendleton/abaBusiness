@@ -31,27 +31,13 @@ const ContactForm = () => {
 
 const Wrapper = styled.section`
   margin: 20px auto;
-  
+
   .message-form {
-    /* width: 95%; */
-    /* margin: 0 auto; */
-    text-align: left;
-    display: grid;
-    grid: auto / 1fr 1fr;
+    width: 95%;
+    margin: 0 auto;
+
     gap: 10px;
-    /* border: 2px solid var(--purple); */
-    .name {
-      grid-area: 1 / 1;
-    }
-    .email {
-      grid-area: 1 / 2;
-    }
-    .subject {
-      grid-area: 2 / 1 / 2 / span 2;
-    }
-    .message {
-      grid-area: 3 / 1 / 3 / span 2;
-    }
+
     label {
       position: absolute;
     }
@@ -75,19 +61,42 @@ const Wrapper = styled.section`
     }
     .btn {
       cursor: pointer;
-      grid-column: 1 / span 2;
+      width: 100%;
       margin: 5px 0;
       padding: 5px 10px;
       border-radius: 1px;
       background-color: var(--color-primary);
       color: #fff;
       font-size: 1.5rem;
-      &:hover{
+      &:hover {
         filter: brightness(1.1);
       }
-      &:active{
-        filter: brightness(0.9)
+      &:active {
+        filter: brightness(0.9);
       }
+    }
+  }
+  @media screen and (min-width: 501px) {
+    .message-form {
+      display: grid;
+      /* grid: auto / 1fr 1fr; */
+
+      .name {
+        grid-area: 1 / 1;
+      }
+      .email {
+        grid-area: 1 / 2;
+      }
+      .subject {
+        grid-area: 2 / 1 / 2 / span 2;
+      }
+      .message {
+        grid-area: 3 / 1 / 3 / span 2;
+      }
+    }
+    .btn {
+      cursor: pointer;
+      grid-column: 1 / span 2;
     }
   }
 `

@@ -3,6 +3,7 @@ import styled from "styled-components"
 import AboutInfo from '../components/AboutInfo'
 import FollowUs from '../components/FollowUs'
 import Location from '../components/Location'
+import Methodologies from '../components/Methodologies'
 
 const About = () => {
 
@@ -12,7 +13,7 @@ const About = () => {
     <Wrapper>
 
       <AboutInfo />
-
+      <Methodologies />
       {/* Add another component here */}
       <Location />
       <FollowUs />
